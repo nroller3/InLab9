@@ -51,5 +51,15 @@ public class Recursion
      */
     private static int largestArrayItemAuxiliary(int [] numbers, int index)
     {
-        
+        int max = -1;
+        if (index == (numbers.length - 1))
+        {
+            return numbers[index];
+        }
+        else
+        {
+            max = Math.max(numbers[index], largestArrayItemAuxiliary(numbers, index+1));
+            return max;
+        }
     }
+} 
